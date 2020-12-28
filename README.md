@@ -54,10 +54,10 @@ The API is contained in Docker.
 ### How to launch the Mobile app ? 📲
 
 ```swift
-1. `cd B-DEV-500-BDX-5-1-cardgames-remi.poulenard/Dashboard`
-2. `pod install`
-3. `open Dashboard.xcworkspace` (or use your file manager)
-4. `Run the Dashboard mobile app from Xcode!`
+1. cd B-DEV-500-BDX-5-1-cardgames-remi.poulenard/Dashboard
+2. pod install
+3. open Dashboard.xcworkspace (or use your file manager)
+4. Run the Dashboard mobile app from Xcode!
 ```
 
 ## Services and Widgets implemented
