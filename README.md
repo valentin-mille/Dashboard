@@ -1,6 +1,6 @@
 # Epitech Dashboard
 
-![Dashboard login screen](https://github.com/theprojectguy/Dashboard/blob/main/images/loginDashboard.png){:height="50%" width="50%"}
+<img src="https://github.com/theprojectguy/Dashboard/blob/main/images/loginDashboard.png" width="50%" height="50%">
 
 ## Introduction 👋
 
