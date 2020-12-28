@@ -1,0 +1,15 @@
+output: docs
+
+source-directory: ./
+
+build_tool_arguments: ["-workspace", "Epicture.xcworkspace", "-scheme", "Epicture"]
+
+author: ValentinRemy
+
+copyright: None
+
+readme: README.md
+
+min_acl: internal
+
+theme: fullwidth

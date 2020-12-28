@@ -1,0 +1,48 @@
+version: "3"
+
+networks:
+  default:
+    name: dashboard-network
+
+services:
+  dashboard-api:
+    build:
+      context: ./api/Dashboard.API
+    command: sh -c "sleep 5 && dotnet Dashboard.API.dll"
+    container_name: dashboard-api
+    depends_on:
+      - dashboard-database
+    environment:
+      - Database__Connection=Server=dashboard-database;Port=5432;UID=dashboard-database-user;PWD=HmxWFa4EgEYJnjs7ABdLRELS4fpv86vL;Database=dashboard-database
+      - WEATHER_KEY=${Weather}
+      - MOVIESDB_KEY=${MoviesDB}
+      - NASA_KEY=${Nasa}
+      - OMDP_KEY=${OMDP}
+    image: dashboard-api
+    ports:
+      - "8080:8080"
+
+  dashboard-database:
+    container_name: dashboard-database
+    environment:
+      - POSTGRES_USER=dashboard-database-user
+      - POSTGRES_PASSWORD=HmxWFa4EgEYJnjs7ABdLRELS4fpv86vL
+      - POSTGRES_DB=dashboard-database
+    image: postgres:13-alpine
+    ports:
+      - "5432:5432"
+    volumes:
+      - dashboard-database-data:/var/lib/postgresql/data
+
+  dashboard-database-viewer:
+    container_name: dashboard-database-viewer
+    image: dpage/pgadmin4
+    ports:
+      - "54320:80"
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=user@dashboard.com
+      - PGADMIN_DEFAULT_PASSWORD=g3KyPSr26tgKmyWbGb4MrSmGm5c5rg8T
+
+volumes:
+  dashboard-database-data:
+    name: dashboard-database-data

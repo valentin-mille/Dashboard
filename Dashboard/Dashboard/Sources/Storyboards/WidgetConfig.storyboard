@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="weh-aT-Obx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Widget Config View Controller-->
+        <scene sceneID="G54-LR-YZv">
+            <objects>
+                <viewController id="weh-aT-Obx" customClass="WidgetConfigViewController" customModule="Dashboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yoc-uc-qdP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hIB-tZ-PZl">
+                                <rect key="frame" x="157" y="94" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="4Vq-cK-nIM"/>
+                                    <constraint firstAttribute="height" constant="100" id="FZu-3R-2rG"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z2z-yp-NFc">
+                                <rect key="frame" x="0.0" y="626" width="414" height="140"/>
+                                <subviews>
+                                    <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DMY-W7-w9X">
+                                        <rect key="frame" x="0.0" y="40" width="414" height="100"/>
+                                        <color key="tintColor" name="Font"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="CCw-jB-UUV"/>
+                                        </constraints>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="At which refresh interval ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AG2-dK-4Oj">
+                                        <rect key="frame" x="88.5" y="5" width="237.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" name="Font"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="Container-1"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="DMY-W7-w9X" secondAttribute="bottom" id="2Vu-kY-CJI"/>
+                                    <constraint firstItem="AG2-dK-4Oj" firstAttribute="centerX" secondItem="z2z-yp-NFc" secondAttribute="centerX" id="ByZ-dF-FdG"/>
+                                    <constraint firstItem="AG2-dK-4Oj" firstAttribute="top" secondItem="z2z-yp-NFc" secondAttribute="top" constant="5" id="Lkj-ni-6BK"/>
+                                    <constraint firstAttribute="height" constant="140" id="a0V-AA-9wu"/>
+                                    <constraint firstItem="DMY-W7-w9X" firstAttribute="leading" secondItem="z2z-yp-NFc" secondAttribute="leading" id="hdd-ox-6du"/>
+                                    <constraint firstAttribute="trailing" secondItem="DMY-W7-w9X" secondAttribute="trailing" id="nWF-l0-tAy"/>
+                                    <constraint firstItem="DMY-W7-w9X" firstAttribute="centerX" secondItem="z2z-yp-NFc" secondAttribute="centerX" id="zUF-ZR-VWg"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYN-bH-kw1">
+                                <rect key="frame" x="111.5" y="786" width="191" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Validate configuration"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fzV-KK-YZ8"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="fYN-bH-kw1" firstAttribute="top" secondItem="z2z-yp-NFc" secondAttribute="bottom" constant="20" id="DcS-yi-InE"/>
+                            <constraint firstItem="fzV-KK-YZ8" firstAttribute="bottom" secondItem="fYN-bH-kw1" secondAttribute="bottom" constant="40" id="FLf-y3-ZXC"/>
+                            <constraint firstItem="hIB-tZ-PZl" firstAttribute="centerX" secondItem="Yoc-uc-qdP" secondAttribute="centerX" id="IHE-a6-dBX"/>
+                            <constraint firstItem="hIB-tZ-PZl" firstAttribute="top" secondItem="fzV-KK-YZ8" secondAttribute="top" constant="50" id="XlW-eo-MsF"/>
+                            <constraint firstAttribute="trailing" secondItem="z2z-yp-NFc" secondAttribute="trailing" id="bFj-lY-ZaI"/>
+                            <constraint firstItem="z2z-yp-NFc" firstAttribute="leading" secondItem="fzV-KK-YZ8" secondAttribute="leading" id="cn6-rD-4jp"/>
+                            <constraint firstItem="fYN-bH-kw1" firstAttribute="centerX" secondItem="Yoc-uc-qdP" secondAttribute="centerX" id="h8y-jC-aRl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="refreshWidgetPicker" destination="DMY-W7-w9X" id="3Dy-zT-Emi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ecG-kl-btL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="316" y="221"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Background">
+            <color red="0.15000000596046448" green="0.16200000047683716" blue="0.27500000596046448" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Container-1">
+            <color red="0.18199999630451202" green="0.20100000500679016" blue="0.32899999618530273" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Font">
+            <color red="0.97699999809265137" green="0.97200000286102295" blue="0.98199999332427979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

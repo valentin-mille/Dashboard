@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WeatherWidgetCell" id="zYj-Tq-jTj" userLabel="WeatherWidgetCell" customClass="WeatherWidgetCollectionViewCell" customModule="Dashboard" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="VW1-0W-SX3">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuQ-Ng-8oi">
+                        <rect key="frame" x="115" y="10" width="30" height="30"/>
+                        <color key="backgroundColor" name="Container-2"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="S5p-OD-oOs"/>
+                            <constraint firstAttribute="width" constant="30" id="rX5-Ca-2ou"/>
+                        </constraints>
+                        <state key="normal" image="arrow.clockwise" catalog="system">
+                            <color key="titleColor" name="Font"/>
+                        </state>
+                        <connections>
+                            <action selector="refreshWidget:" destination="zYj-Tq-jTj" eventType="touchUpInside" id="OFt-QD-sok"/>
+                        </connections>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SocialNetworkIcon" translatesAutoresizingMaskIntoConstraints="NO" id="4BS-T5-VgE">
+                        <rect key="frame" x="10" y="10" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="5F8-x5-V1C"/>
+                            <constraint firstAttribute="height" constant="40" id="Uet-no-H1K"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03i-cc-Eqs">
+                        <rect key="frame" x="10" y="106" width="125" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="125" id="TPG-Ux-B3H"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" name="Font"/>
+                        <color key="highlightedColor" name="Title"/>
+                    </label>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6y-Gl-gOB">
+                        <rect key="frame" x="115" y="115" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="f0Z-l8-ywJ"/>
+                            <constraint firstAttribute="height" constant="30" id="tK1-9j-NbL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Weather infos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oY7-Wh-Zd5">
+                        <rect key="frame" x="10" y="65" width="130" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="Font"/>
+                        <color key="highlightedColor" name="Font"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="03i-cc-Eqs" firstAttribute="leading" secondItem="VW1-0W-SX3" secondAttribute="leading" constant="10" id="4DB-Fb-85o"/>
+                    <constraint firstItem="4BS-T5-VgE" firstAttribute="top" secondItem="VW1-0W-SX3" secondAttribute="top" constant="10" id="8rh-JR-05q"/>
+                    <constraint firstItem="wuQ-Ng-8oi" firstAttribute="top" secondItem="VW1-0W-SX3" secondAttribute="top" constant="10" id="9Hx-6z-Lpf"/>
+                    <constraint firstAttribute="trailing" secondItem="wuQ-Ng-8oi" secondAttribute="trailing" constant="5" id="A3i-VC-bvv"/>
+                    <constraint firstItem="oY7-Wh-Zd5" firstAttribute="leading" secondItem="VW1-0W-SX3" secondAttribute="leading" constant="10" id="Bhc-ld-UL8"/>
+                    <constraint firstItem="03i-cc-Eqs" firstAttribute="top" secondItem="oY7-Wh-Zd5" secondAttribute="bottom" constant="20" id="GhL-zV-GmA"/>
+                    <constraint firstAttribute="trailing" secondItem="oY7-Wh-Zd5" secondAttribute="trailing" constant="10" id="POG-zj-Vke"/>
+                    <constraint firstAttribute="bottom" secondItem="p6y-Gl-gOB" secondAttribute="bottom" constant="5" id="QdP-mL-JKD"/>
+                    <constraint firstAttribute="bottom" secondItem="03i-cc-Eqs" secondAttribute="bottom" constant="20" id="Rxf-Ja-OH7"/>
+                    <constraint firstAttribute="trailing" secondItem="p6y-Gl-gOB" secondAttribute="trailing" constant="5" id="XI0-rB-TuF"/>
+                    <constraint firstItem="oY7-Wh-Zd5" firstAttribute="top" secondItem="VW1-0W-SX3" secondAttribute="top" constant="65" id="laG-Kv-6o1"/>
+                    <constraint firstItem="4BS-T5-VgE" firstAttribute="leading" secondItem="VW1-0W-SX3" secondAttribute="leading" constant="10" id="tDr-6L-Ful"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="refreshButton" destination="wuQ-Ng-8oi" id="aBv-Ou-JSC"/>
+                <outlet property="selectedLabel" destination="p6y-Gl-gOB" id="7iw-5D-YU8"/>
+                <outlet property="serviceLabel" destination="03i-cc-Eqs" id="cOE-YF-hKN"/>
+                <outlet property="weatherLabel" destination="oY7-Wh-Zd5" id="jo2-PD-BI0"/>
+                <outlet property="widgetIcon" destination="4BS-T5-VgE" id="swm-jW-THT"/>
+            </connections>
+            <point key="canvasLocation" x="210.1449275362319" y="167.41071428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="SocialNetworkIcon" width="512" height="512"/>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <namedColor name="Container-2">
+            <color red="0.22699999809265137" green="0.2800000011920929" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Font">
+            <color red="0.97699999809265137" green="0.97200000286102295" blue="0.98199999332427979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Title">
+            <color red="0.46000000834465027" green="0.4830000102519989" blue="0.65100002288818359" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CovidWidgetCell" id="ogh-cD-5x0" customClass="CovidWidgetCollectionViewCell" customModule="Dashboard" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tod-Jb-Ied">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="act-eP-XSH">
+                        <rect key="frame" x="115" y="10" width="30" height="30"/>
+                        <color key="backgroundColor" name="Container-2"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="Pb3-jb-3ho"/>
+                            <constraint firstAttribute="width" constant="30" id="gA4-f8-iRq"/>
+                        </constraints>
+                        <state key="normal" image="arrow.clockwise" catalog="system">
+                            <color key="titleColor" name="Font"/>
+                        </state>
+                        <connections>
+                            <action selector="refreshWidget:" destination="ogh-cD-5x0" eventType="touchUpInside" id="jWW-al-48y"/>
+                        </connections>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SocialNetworkIcon" translatesAutoresizingMaskIntoConstraints="NO" id="viQ-ys-35C">
+                        <rect key="frame" x="10" y="10" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="DgO-sl-1SW"/>
+                            <constraint firstAttribute="width" constant="40" id="kps-Vc-gor"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbz-5U-zwM">
+                        <rect key="frame" x="10" y="106" width="125" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="125" id="nMo-3C-ocl"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" name="Font"/>
+                        <color key="highlightedColor" name="Title"/>
+                    </label>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baK-bp-Xcv">
+                        <rect key="frame" x="115" y="115" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="YOl-71-uDZ"/>
+                            <constraint firstAttribute="height" constant="30" id="hF0-xX-5K9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Covid infos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFP-Tn-GYQ">
+                        <rect key="frame" x="10" y="65" width="130" height="31"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="Font"/>
+                        <color key="highlightedColor" name="Font"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Sbz-5U-zwM" secondAttribute="bottom" constant="20" id="0dj-PG-Sbd"/>
+                    <constraint firstItem="viQ-ys-35C" firstAttribute="leading" secondItem="tod-Jb-Ied" secondAttribute="leading" constant="10" id="6dy-ib-Yyl"/>
+                    <constraint firstItem="viQ-ys-35C" firstAttribute="top" secondItem="tod-Jb-Ied" secondAttribute="top" constant="10" id="9zD-uc-p5R"/>
+                    <constraint firstItem="dFP-Tn-GYQ" firstAttribute="leading" secondItem="tod-Jb-Ied" secondAttribute="leading" constant="10" id="I2Q-NF-1I9"/>
+                    <constraint firstItem="act-eP-XSH" firstAttribute="top" secondItem="tod-Jb-Ied" secondAttribute="top" constant="10" id="I9O-nZ-3sp"/>
+                    <constraint firstAttribute="trailing" secondItem="act-eP-XSH" secondAttribute="trailing" constant="5" id="Oce-Nj-9iz"/>
+                    <constraint firstAttribute="trailing" secondItem="baK-bp-Xcv" secondAttribute="trailing" constant="5" id="P7K-jm-0Ue"/>
+                    <constraint firstItem="dFP-Tn-GYQ" firstAttribute="top" secondItem="tod-Jb-Ied" secondAttribute="top" constant="65" id="PxN-wQ-UdY"/>
+                    <constraint firstItem="Sbz-5U-zwM" firstAttribute="leading" secondItem="tod-Jb-Ied" secondAttribute="leading" constant="10" id="SDh-Iz-dN7"/>
+                    <constraint firstAttribute="bottom" secondItem="baK-bp-Xcv" secondAttribute="bottom" constant="5" id="WjG-ae-3oo"/>
+                    <constraint firstItem="Sbz-5U-zwM" firstAttribute="top" secondItem="dFP-Tn-GYQ" secondAttribute="bottom" constant="10" id="YQ5-jF-gmf"/>
+                    <constraint firstAttribute="trailing" secondItem="dFP-Tn-GYQ" secondAttribute="trailing" constant="10" id="fyq-Ku-10b"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="refreshButton" destination="act-eP-XSH" id="DOh-kZ-y4Y"/>
+                <outlet property="selectedLabel" destination="baK-bp-Xcv" id="ekd-VP-eLv"/>
+                <outlet property="serviceLabel" destination="Sbz-5U-zwM" id="fBb-rM-98E"/>
+                <outlet property="statsLabel" destination="dFP-Tn-GYQ" id="Gde-WO-WmX"/>
+                <outlet property="widgetIcon" destination="viQ-ys-35C" id="uI2-07-N3B"/>
+            </connections>
+            <point key="canvasLocation" x="210.1449275362319" y="167.41071428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="SocialNetworkIcon" width="512" height="512"/>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <namedColor name="Container-2">
+            <color red="0.22699999809265137" green="0.2800000011920929" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Font">
+            <color red="0.97699999809265137" green="0.97200000286102295" blue="0.98199999332427979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Title">
+            <color red="0.46000000834465027" green="0.4830000102519989" blue="0.65100002288818359" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

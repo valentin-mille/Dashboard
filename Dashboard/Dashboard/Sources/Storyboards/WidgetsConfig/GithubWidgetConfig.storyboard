@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UGe-kZ-mt0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Github Widget Config View Controller-->
+        <scene sceneID="9B8-8q-iD4">
+            <objects>
+                <viewController storyboardIdentifier="GithubConfigViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UGe-kZ-mt0" customClass="GithubWidgetConfigViewController" customModule="Dashboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2jG-G5-q3r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cE3-37-y3L">
+                                <rect key="frame" x="157" y="74" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="L9m-ne-edc"/>
+                                    <constraint firstAttribute="height" constant="100" id="rJM-Zg-S8D"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uDc-WY-34L">
+                                <rect key="frame" x="0.0" y="626" width="414" height="140"/>
+                                <subviews>
+                                    <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="prK-Xk-WI4">
+                                        <rect key="frame" x="0.0" y="40" width="414" height="100"/>
+                                        <color key="tintColor" name="Font"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="azX-WK-Bo2"/>
+                                        </constraints>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="At which refresh interval ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZ5-t7-8Nv">
+                                        <rect key="frame" x="88.5" y="5" width="237.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" name="Font"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="Container-1"/>
+                                <constraints>
+                                    <constraint firstItem="aZ5-t7-8Nv" firstAttribute="top" secondItem="uDc-WY-34L" secondAttribute="top" constant="5" id="86B-jT-zGO"/>
+                                    <constraint firstAttribute="trailing" secondItem="prK-Xk-WI4" secondAttribute="trailing" id="BVN-op-Au0"/>
+                                    <constraint firstItem="prK-Xk-WI4" firstAttribute="centerX" secondItem="uDc-WY-34L" secondAttribute="centerX" id="GST-Lb-4gF"/>
+                                    <constraint firstItem="aZ5-t7-8Nv" firstAttribute="centerX" secondItem="uDc-WY-34L" secondAttribute="centerX" id="HDZ-2H-1by"/>
+                                    <constraint firstAttribute="height" constant="140" id="R8Q-St-fbz"/>
+                                    <constraint firstItem="prK-Xk-WI4" firstAttribute="leading" secondItem="uDc-WY-34L" secondAttribute="leading" id="heW-aj-6HA"/>
+                                    <constraint firstAttribute="bottom" secondItem="prK-Xk-WI4" secondAttribute="bottom" id="lF6-6D-APQ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q70-Tz-cVA">
+                                <rect key="frame" x="111.5" y="786" width="191" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Validate configuration"/>
+                                <connections>
+                                    <action selector="validateConfigAction:" destination="UGe-kZ-mt0" eventType="touchUpInside" id="GVD-QV-YhZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="A3Q-bq-1W0"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="A3Q-bq-1W0" firstAttribute="trailing" secondItem="uDc-WY-34L" secondAttribute="trailing" id="7Rt-Zh-Gho"/>
+                            <constraint firstItem="uDc-WY-34L" firstAttribute="leading" secondItem="A3Q-bq-1W0" secondAttribute="leading" id="aMu-vY-0ug"/>
+                            <constraint firstItem="cE3-37-y3L" firstAttribute="top" secondItem="A3Q-bq-1W0" secondAttribute="top" constant="30" id="e0M-AW-Z5c"/>
+                            <constraint firstItem="Q70-Tz-cVA" firstAttribute="centerX" secondItem="2jG-G5-q3r" secondAttribute="centerX" id="eKG-98-F07"/>
+                            <constraint firstItem="cE3-37-y3L" firstAttribute="centerX" secondItem="2jG-G5-q3r" secondAttribute="centerX" id="hU9-cZ-cso"/>
+                            <constraint firstItem="A3Q-bq-1W0" firstAttribute="bottom" secondItem="Q70-Tz-cVA" secondAttribute="bottom" constant="40" id="khw-rC-9jB"/>
+                            <constraint firstItem="Q70-Tz-cVA" firstAttribute="top" secondItem="uDc-WY-34L" secondAttribute="bottom" constant="20" id="slC-HC-Alw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="refreshView" destination="uDc-WY-34L" id="wKh-nL-Shm"/>
+                        <outlet property="refreshWidgetPicker" destination="prK-Xk-WI4" id="BfN-Rj-eN7"/>
+                        <outlet property="serviceImage" destination="cE3-37-y3L" id="N3n-Zj-k5g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fai-12-t9u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-488.40579710144931" y="34.821428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Background">
+            <color red="0.15000000596046448" green="0.16200000047683716" blue="0.27500000596046448" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Container-1">
+            <color red="0.18199999630451202" green="0.20100000500679016" blue="0.32899999618530273" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Font">
+            <color red="0.97699999809265137" green="0.97200000286102295" blue="0.98199999332427979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
