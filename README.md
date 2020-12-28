@@ -1,6 +1,6 @@
 # Epitech Dashboard
 
-![Dashboard login screen](https://github.com/theprojectguy/Dashboard/images/loginDashboard.png)
+![Dashboard login screen](https://github.com/theprojectguy/Dashboard/blob/main/images/loginDashboard.png)
 
 ## Introduction 👋
 
