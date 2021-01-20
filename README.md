@@ -37,7 +37,7 @@ This is an Epitech 3rd year project.
 
 ## How to launch the project ? 📲
 
-1. Clone the project : `git clone B-DEV-500-BDX-5-1-cardgames-remi.poulenard`
+1. Clone the project : `git clone https://github.com/theprojectguy/Dashboard`
 
 then Run the following commands to start the Dashboard app.
 
